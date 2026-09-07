@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Disheveled — Lower Third</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="_brand.css">
+<style>
+/* Transparent source — sits on top of camera / screen capture. */
+.lt{
+  position:fixed;left:96px;bottom:110px;z-index:30;
+  display:flex;align-items:stretch;
+  background:rgba(14,14,14,.92);border:1px solid var(--border);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+}
+.lt-bar{width:6px;background:var(--accent);flex-shrink:0}
+.lt-in{padding:22px 34px 20px 28px}
+.lt-name{font-family:var(--display);font-size:58px;line-height:.92;color:var(--white);letter-spacing:.03em}
+.lt-role{margin-top:10px;font-size:13px;letter-spacing:.3em;color:var(--grey);text-transform:uppercase}
+.lt-note{margin-top:12px;padding-top:12px;border-top:1px solid var(--border);
+         font-size:12px;letter-spacing:.22em;color:var(--dim);text-transform:uppercase}
+.lt.hidden{opacity:0;transform:translateX(-28px);transition:opacity .45s ease,transform .45s ease}
+.lt.in{animation:ltin .7s cubic-bezier(.16,1,.3,1) both}
+@keyframes ltin{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:translateX(0)}}
+</style>
+</head>
+<body>
+<div class="lt in" id="lt">
+  <div class="lt-bar"></div>
+  <div class="lt-in">
+    <div class="lt-name" id="name">LOGAN STOUT</div>
+    <div class="lt-role" id="role">Disheveled Studio — Founder</div>
+    <div class="lt-note" id="note">Sip &amp; Teach — Building in public</div>
+  </div>
+</div>
+<script>
+(function(){
+  var q = new URLSearchParams(location.search);
+  // ?name=…&role=…&note=…&hold=8   (hold in seconds; 0 or omitted = stay on screen)
+  ['name','role','note'].forEach(function(k){
+    var v = q.get(k);
+    var el = document.getElementById(k);
+    if(v === null) return;
+    if(v === '') { el.style.display = 'none'; return; }
+    el.textContent = v;
+  });
+  var hold = parseFloat(q.get('hold'));
+  if(!isNaN(hold) && hold > 0){
+    setTimeout(function(){
+      var lt = document.getElementById('lt');
+      lt.classList.remove('in');
+      lt.classList.add('hidden');
+    }, hold * 1000);
+  }
+})();
+</script>
+</body>
+</html>

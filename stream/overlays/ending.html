@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Disheveled — Ending</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="_brand.css">
+<style>
+.wrap{position:relative;z-index:10;height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 120px}
+h1{font-size:170px}
+.cols{margin-top:52px;padding-top:34px;border-top:1px solid var(--border);display:grid;grid-template-columns:repeat(3,1fr);gap:48px}
+.col-l{font-size:12px;letter-spacing:.35em;color:var(--muted);text-transform:uppercase;margin-bottom:12px}
+.col-v{font-size:18px;letter-spacing:.16em;color:var(--cream);text-transform:uppercase;line-height:1.9}
+.col-v .accent{display:block}
+</style>
+</head>
+<body class="solid">
+<div class="vig"></div>
+<div class="wrap">
+  <div class="eyebrow rise" style="margin-bottom:34px">That's the session</div>
+  <h1 class="display rise">THANKS FOR<br><span class="hollow">PULLING UP</span></h1>
+  <div class="cols rise">
+    <div><div class="col-l">Next Session</div><div class="col-v" id="next">Same time next week</div></div>
+    <div><div class="col-l">The Drop</div><div class="col-v"><span class="accent" id="site">loganbstout.github.io/DISHELEVED</span>Collection 001 — 50 units</div></div>
+    <div><div class="col-l">Stay Close</div><div class="col-v" id="social">Subscribe &amp; hit the bell</div></div>
+  </div>
+</div>
+<div class="mq"><div class="mq-track" id="track"></div></div>
+<div class="scan"></div><div class="grain"></div>
+<script src="_ticker.js"></script>
+<script>
+(function(){
+  var q = new URLSearchParams(location.search);
+  if(q.get('next'))   document.getElementById('next').textContent   = q.get('next');
+  if(q.get('site'))   document.getElementById('site').textContent   = q.get('site');
+  if(q.get('social')) document.getElementById('social').textContent = q.get('social');
+  dshTicker(document.getElementById('track'), q.get('ticker'));
+})();
+</script>
+</body>
+</html>
