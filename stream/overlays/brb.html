@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Disheveled — Be Right Back</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="_brand.css">
+<style>
+.wrap{position:relative;z-index:10;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 120px}
+h1{font-size:190px}
+.note{margin-top:40px;padding-top:30px;border-top:1px solid var(--border);
+      font-size:15px;letter-spacing:.25em;color:var(--grey);text-transform:uppercase;line-height:2.4}
+.mini{margin-top:14px;font-size:12px;letter-spacing:.3em;color:var(--muted);text-transform:uppercase}
+</style>
+</head>
+<body class="solid">
+<div class="vig"></div>
+<div class="wrap">
+  <div class="eyebrow rise" style="margin-bottom:34px">Hold Tight</div>
+  <h1 class="display rise">BE RIGHT<br><span class="hollow">BACK</span></h1>
+  <div class="note rise" id="note">Refill the cup. Back in a minute.</div>
+  <div class="mini rise">Chat stays open — drop questions</div>
+</div>
+<div class="mq"><div class="mq-track" id="track"></div></div>
+<div class="scan"></div><div class="grain"></div>
+<script src="_ticker.js"></script>
+<script>
+(function(){
+  var q = new URLSearchParams(location.search);
+  if(q.get('note')) document.getElementById('note').textContent = q.get('note');
+  dshTicker(document.getElementById('track'), q.get('ticker'));
+})();
+</script>
+</body>
+</html>

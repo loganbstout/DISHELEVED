@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Disheveled — Starting Soon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="_brand.css">
+<style>
+.wrap{position:relative;z-index:10;height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 120px}
+.eyebrow{margin-bottom:34px}
+h1{font-size:200px}
+h1 .ln{display:block}
+.sub{margin-top:46px;padding-top:34px;border-top:1px solid var(--border);display:flex;align-items:flex-end;gap:80px}
+.ep{font-size:16px;letter-spacing:.22em;color:var(--grey);text-transform:uppercase;line-height:2.4;max-width:640px}
+.clock{margin-left:auto;text-align:right}
+.clock-l{font-size:12px;letter-spacing:.35em;color:var(--muted);text-transform:uppercase;margin-bottom:8px}
+.clock-v{font-family:var(--display);font-size:120px;line-height:.9;color:var(--cream)}
+.clock-v.hot{color:var(--accent)}
+.live{position:fixed;top:56px;right:120px;z-index:20;display:flex;align-items:center;gap:12px;
+      font-size:12px;letter-spacing:.3em;color:var(--dim);text-transform:uppercase;
+      border:1px solid var(--border);padding:12px 18px}
+</style>
+</head>
+<body class="solid">
+<div class="vig"></div>
+<div class="live"><span class="dot"></span><span>Stream Standby</span></div>
+
+<div class="wrap">
+  <div class="eyebrow rise" id="eyebrow">Disheveled Studio — Live</div>
+  <h1 class="display rise">
+    <span class="ln">STARTING</span>
+    <span class="ln hollow">SOON</span>
+  </h1>
+  <div class="sub rise">
+    <div class="ep" id="ep">Sip &amp; Teach — Episode 001<br>Grab a drink. We build in the open.</div>
+    <div class="clock">
+      <div class="clock-l">Doors open in</div>
+      <div class="clock-v" id="clock">--:--</div>
+    </div>
+  </div>
+</div>
+
+<div class="mq">
+  <div class="mq-track" id="track"></div>
+</div>
+
+<div class="scan"></div><div class="grain"></div>
+
+<script src="_ticker.js"></script>
+<script>
+(function(){
+  var q = new URLSearchParams(location.search);
+
+  // ?title= / ?ep= / ?tagline=  — everything is overridable from the OBS source URL
+  if(q.get('brand'))   document.getElementById('eyebrow').textContent = q.get('brand');
+  var title   = q.get('title')   || 'Sip & Teach — Episode 001';
+  var tagline = q.get('tagline') || 'Grab a drink. We build in the open.';
+  document.getElementById('ep').innerHTML = '';
+  document.getElementById('ep').append(title, document.createElement('br'), tagline);
+
+  // Marquee: ?ticker=A|B|C  (pipe separated)
+  dshTicker(document.getElementById('track'), q.get('ticker'));
+
+  // Countdown: ?mins=10 (from load) or ?at=2026-09-07T19:00 (wall clock, local time)
+  var el = document.getElementById('clock');
+  var target;
+  if(q.get('at')){
+    target = new Date(q.get('at')).getTime();
+    if(isNaN(target)) target = null;
+  }
+  if(!target){
+    var mins = parseFloat(q.get('mins'));
+    if(isNaN(mins)) mins = 10;
+    target = Date.now() + mins * 60000;
+  }
+  function pad(n){return (n<10?'0':'') + n}
+  function tick(){
+    var left = Math.max(0, target - Date.now());
+    var total = Math.floor(left/1000);
+    var h = Math.floor(total/3600), m = Math.floor((total%3600)/60), s = total%60;
+    el.textContent = h > 0 ? (h + ':' + pad(m) + ':' + pad(s)) : (pad(m) + ':' + pad(s));
+    el.classList.toggle('hot', left <= 60000);
+    if(left === 0){ el.textContent = 'NOW'; clearInterval(iv); }
+  }
+  tick();
+  var iv = setInterval(tick, 250);
+})();
+</script>
+</body>
+</html>

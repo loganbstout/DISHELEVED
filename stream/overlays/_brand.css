@@ -1,0 +1,71 @@
+/* Disheveled Studio — stream overlay brand kit
+   Tokens lifted from index.html so overlays and the site read as one thing. */
+:root{
+  --black:#080808; --off:#0e0e0e; --dark:#141414; --mid:#1e1e1e;
+  --border:#222; --muted:#2e2e2e; --dim:#444; --grey:#666;
+  --cream:#e8e3d8; --white:#f2ede4; --accent:#c8ff00;
+  --display:"Bebas Neue","Oswald","Arial Narrow",sans-serif;
+  --mono:"Space Mono","Courier New",monospace;
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+html,body{width:1920px;height:1080px;overflow:hidden}
+body{
+  font-family:var(--mono);
+  color:var(--cream);
+  background:transparent;              /* OBS keys this out unless .solid is set */
+  -webkit-font-smoothing:antialiased;
+}
+body.solid{background:var(--black)}
+
+/* Film grain — same fractal-noise trick the site uses */
+.grain{
+  position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.05;
+  mix-blend-mode:overlay;background-size:200px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.scan{
+  position:fixed;inset:0;z-index:9998;pointer-events:none;
+  background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.06) 2px,rgba(0,0,0,.06) 4px);
+}
+.vig{
+  position:fixed;inset:0;z-index:1;pointer-events:none;
+  background:radial-gradient(ellipse at 50% 40%,transparent 5%,rgba(8,8,8,.8) 55%,rgba(8,8,8,.99) 100%);
+}
+
+/* Type primitives */
+.eyebrow{
+  font-size:14px;letter-spacing:.4em;color:var(--dim);text-transform:uppercase;
+  display:flex;align-items:center;gap:18px;
+}
+.eyebrow::before{content:"";width:44px;height:1px;background:var(--dim);display:block;flex-shrink:0}
+.display{font-family:var(--display);color:var(--white);line-height:.85;letter-spacing:-.01em}
+.hollow{color:transparent;-webkit-text-stroke:1px var(--mid)}
+.accent{color:var(--accent)}
+
+/* Pulsing live dot */
+.dot{width:9px;height:9px;border-radius:50%;background:var(--accent);animation:pulse 2s ease-in-out infinite;flex-shrink:0}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+
+/* Bottom marquee ticker */
+.mq{
+  position:fixed;left:0;right:0;bottom:0;z-index:20;overflow:hidden;
+  padding:16px 0;background:var(--off);
+  border-top:1px solid var(--border);
+}
+.mq-track{display:flex;width:max-content;animation:mq 26s linear infinite}
+.mq-i{
+  display:flex;align-items:center;gap:38px;padding:0 38px;white-space:nowrap;
+  font-size:13px;letter-spacing:.35em;color:var(--dim);text-transform:uppercase;
+}
+.mq-d{width:4px;height:4px;border-radius:50%;background:var(--dim)}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+@keyframes rise{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:translateY(0)}}
+.rise{animation:rise .8s cubic-bezier(.16,1,.3,1) both}
+
+/* Respect OBS "shutdown source when not visible" restarts: no reliance on entry state */
+@media (prefers-reduced-motion:reduce){
+  .mq-track,.dot{animation:none}
+}
