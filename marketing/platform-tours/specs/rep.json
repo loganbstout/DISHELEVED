@@ -1,0 +1,423 @@
+{
+  "id": "rep",
+  "persona": "the sales rep",
+  "colourway": "Cobalt",
+  "size": "tour_wide",
+  "graphics": [
+    {
+      "slug": "pipeline-board",
+      "kicker": "SIPS TOUR / THE SALES REP / 01",
+      "h2": "THE BOARD, AND WHAT FILLED IT",
+      "meta": [
+        "Surface <b>Pipeline</b>",
+        "Maturity <b>in daily use</b>",
+        "Data <b>demo tenant sample</b>"
+      ],
+      "app": {
+        "url": "app.stoutintel.com/pipeline",
+        "badge": "Demo tenant",
+        "nav": [
+          "Dashboard",
+          "Pipeline",
+          "Projects",
+          "Clients",
+          "Quotes",
+          "Warehouse",
+          "Insights",
+          "Search"
+        ],
+        "active": "Pipeline",
+        "crumb": "Sales / Pipeline",
+        "title": "Pipeline",
+        "blocks": [
+          {
+            "kind": "statrow",
+            "stats": [
+              {
+                "v": "136",
+                "l": "open deals"
+              },
+              {
+                "v": "71",
+                "l": "absorbed trail"
+              },
+              {
+                "v": "14",
+                "l": "due a hygiene sweep"
+              },
+              {
+                "v": "2",
+                "l": "waiting on me"
+              }
+            ]
+          },
+          {
+            "kind": "board",
+            "columns": [
+              {
+                "name": "Qualifying",
+                "count": "31",
+                "cards": [
+                  {
+                    "t": "Sample Athletics, spring team kit",
+                    "m": "opened by forward, 2 days in stage",
+                    "chip": "from email",
+                    "chipclass": "ok"
+                  },
+                  {
+                    "t": "Sample Brewing, festival drop",
+                    "m": "4 days in stage",
+                    "chip": "no owner",
+                    "chipclass": "hot"
+                  }
+                ]
+              },
+              {
+                "name": "Quoting",
+                "count": "22",
+                "cards": [
+                  {
+                    "t": "Sample Dental, patient welcome kit",
+                    "m": "quote absorbed from link",
+                    "chip": "absorbed",
+                    "chipclass": "ok"
+                  },
+                  {
+                    "t": "Sample Outfitters, retail reorder",
+                    "m": "reorder radar, closed this week last year"
+                  }
+                ]
+              },
+              {
+                "name": "Won, in production",
+                "count": "19",
+                "cards": [
+                  {
+                    "t": "Sample Trading, onboarding boxes",
+                    "m": "proof approved 6 min after send",
+                    "chip": "in production",
+                    "chipclass": "ok"
+                  }
+                ]
+              },
+              {
+                "name": "Stalled",
+                "count": "18",
+                "cards": [
+                  {
+                    "t": "Sample Systems, conference giveaway",
+                    "m": "41 days in stage, no activity",
+                    "chip": "sweep due",
+                    "chipclass": "hot"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "pins": [
+        {
+          "n": 1,
+          "x": 27,
+          "y": 19.5
+        },
+        {
+          "n": 2,
+          "x": 45,
+          "y": 19.5
+        },
+        {
+          "n": 3,
+          "x": 33,
+          "y": 41
+        },
+        {
+          "n": 4,
+          "x": 51,
+          "y": 41
+        },
+        {
+          "n": 5,
+          "x": 82,
+          "y": 44.5
+        },
+        {
+          "n": 6,
+          "x": 10.5,
+          "y": 34
+        }
+      ],
+      "key": [
+        {
+          "n": 1,
+          "t": "Counted, not estimated",
+          "d": "Every figure on this strip is read from the records themselves, so the number at the top of the board means something."
+        },
+        {
+          "n": 2,
+          "t": "The absorption trail",
+          "d": "71 of 136 deals carry a full trail pulled off a link somebody had already sent a client. Nobody typed those."
+        },
+        {
+          "n": 3,
+          "t": "A deal that opened itself",
+          "d": "Forwarding the email you were going to forward anyway creates the deal, the contact and the first activity line."
+        },
+        {
+          "n": 4,
+          "t": "The quote came in as a document",
+          "d": "There is no API to buy here. The platform reads the link and the documents you already share."
+        },
+        {
+          "n": 5,
+          "t": "Days in stage, on the card",
+          "d": "Nothing goes quiet without showing it. Stalled deals get four short questions every fourteen days."
+        },
+        {
+          "n": 6,
+          "t": "One search, every record",
+          "d": "Clients, jobs, quotes, files and messages, from one box rather than six tabs."
+        }
+      ],
+      "keyfoot": "Reconstruction drawn for this document with sample rows. Not a screenshot of a live book.<br><b>stoutintel.com/sips</b>"
+    },
+    {
+      "slug": "the-job-record",
+      "kicker": "SIPS TOUR / THE SALES REP / 02",
+      "h2": "ONE JOB, AND WHO FILLED WHAT",
+      "meta": [
+        "Surface <b>Projects</b>",
+        "Maturity <b>in daily use</b>",
+        "Data <b>demo tenant sample</b>"
+      ],
+      "app": {
+        "url": "app.stoutintel.com/projects/sample-athletics-spring-kit",
+        "nav": [
+          "Dashboard",
+          "Pipeline",
+          {
+            "t": "Projects",
+            "pin": 1
+          },
+          "Clients",
+          "Quotes",
+          "Warehouse",
+          "Insights",
+          "Search"
+        ],
+        "active": "Projects",
+        "crumb": "Production / Projects / Sample Athletics",
+        "title": "Spring team kit, 240 pieces",
+        "blocks": [
+          {
+            "kind": "ladder",
+            "steps": [
+              {
+                "t": "Brief received, opened from a forwarded email",
+                "state": "done"
+              },
+              {
+                "t": "Art request raised from a chat post",
+                "state": "done",
+                "pin": 2
+              },
+              {
+                "t": "Proof sent, decided in 6 minutes",
+                "state": "done",
+                "pin": 3
+              },
+              {
+                "t": "In production at the supplier",
+                "state": "now"
+              },
+              {
+                "t": "Shipped, tracking on the record"
+              },
+              {
+                "t": "Delivered, follow up drafted a week later",
+                "pin": 4
+              }
+            ]
+          },
+          {
+            "kind": "panel",
+            "title": "Fields on this job",
+            "pin": 5,
+            "fields": [
+              {
+                "k": "opened by",
+                "v": "email forward, filed automatically"
+              },
+              {
+                "k": "art request",
+                "v": "chat post, 117 of these on record"
+              },
+              {
+                "k": "proof decision",
+                "v": "approved, receipt with a name and a time"
+              },
+              {
+                "k": "in hands date",
+                "v": "absorbed from the shared link"
+              },
+              {
+                "k": "milestones",
+                "v": "nobody has ever typed one of these",
+                "empty": true
+              },
+              {
+                "k": "waiting on",
+                "v": "typed 2 times out of 136 jobs",
+                "empty": true
+              }
+            ]
+          },
+          {
+            "kind": "thread",
+            "messages": [
+              {
+                "w": "Client, on the job",
+                "x": "Can we still add 40 pieces in the small size?",
+                "side": "them",
+                "pin": 6
+              },
+              {
+                "w": "Me, 9 minutes later",
+                "x": "Yes. Supplier confirmed, in hands date holds."
+              }
+            ]
+          },
+          {
+            "kind": "rows",
+            "head": [
+              "Recent activity on this job",
+              "Source",
+              "When"
+            ],
+            "rows": [
+              [
+                "Supplier acknowledged the purchase order",
+                "email sweep",
+                "today"
+              ],
+              [
+                "Proof approved by the client",
+                "approval link",
+                "2 days ago"
+              ],
+              [
+                "Art request opened",
+                "chat post",
+                "4 days ago"
+              ],
+              [
+                "Job created from a forwarded email",
+                "inbox",
+                "6 days ago"
+              ]
+            ]
+          }
+        ]
+      },
+      "key": [
+        {
+          "n": 1,
+          "t": "The job, not the deal",
+          "d": "Production lives on its own record with the status ladder, the files and the message thread attached to it."
+        },
+        {
+          "n": 2,
+          "t": "Art started from a chat post",
+          "d": "The input surface is the channel the team already uses, which is the only reason this one filled up."
+        },
+        {
+          "n": 3,
+          "t": "A decision with a receipt",
+          "d": "87 of 89 proofs closed out at a six minute median. Every decision carries a name and a time."
+        },
+        {
+          "n": 4,
+          "t": "The job is not done at delivered",
+          "d": "A week after it lands the system drafts the follow up. I still have to press send, and that is deliberate."
+        },
+        {
+          "n": 5,
+          "t": "The two kinds of field",
+          "d": "The filled ones came from somewhere a person already was. The italic ones asked somebody to type, so they sit near zero."
+        },
+        {
+          "n": 6,
+          "t": "The thread knows the job",
+          "d": "No retyping which job this is about. The message and the answer both file themselves here."
+        }
+      ],
+      "keyfoot": "Reconstruction drawn for this document with sample rows. Not a screenshot of a live book.<br><b>stoutintel.com/sips</b>"
+    },
+    {
+      "slug": "what-the-rep-gets",
+      "layout": "matrix",
+      "cols": 3,
+      "kicker": "SIPS TOUR / THE SALES REP / 03",
+      "h2": "WHAT A REP TOUCHES, GETS, AND NEVER HAS TO DO",
+      "meta": [
+        "Persona <b>the sales rep</b>",
+        "Source <b>feature inventory, 8 August 2026</b>"
+      ],
+      "cards": [
+        {
+          "title": "What you touch",
+          "state": "five things",
+          "items": [
+            "Forward the email you were sending anyway",
+            "Post the update in the channel you already use",
+            "Paste the link you already send the client",
+            "Say yes or no to a proof",
+            "Answer four questions on a stale deal every fortnight"
+          ],
+          "foot": "There is no sixth thing."
+        },
+        {
+          "title": "What you get",
+          "state": "in daily use",
+          "items": [
+            "Pipeline board with days in stage on the card",
+            "Projects, brief through delivered, thread on the job",
+            "Clients and contacts with the reorder radar",
+            "Quotes, invoices and purchase orders on the record",
+            "One search across every record type",
+            "A phone surface built for capture, not a shrunken desktop"
+          ],
+          "foot": "Eleven people in it every working day."
+        },
+        {
+          "title": "What it never asks",
+          "state": "by design",
+          "items": [
+            {
+              "t": "Retyping a company that is already in an email",
+              "off": true
+            },
+            {
+              "t": "A deadline chain nobody has ever filled in",
+              "off": true
+            },
+            {
+              "t": "A waiting on field, typed 2 times in 136 jobs",
+              "off": true
+            },
+            {
+              "t": "A status report, the activity log is the report",
+              "off": true
+            },
+            {
+              "t": "Pressing send for you, that stays human",
+              "off": true
+            }
+          ],
+          "foot": "A field that needs typing sits at 0 to 15 percent filled."
+        }
+      ]
+    }
+  ]
+}

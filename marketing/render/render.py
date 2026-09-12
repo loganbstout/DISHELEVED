@@ -19,6 +19,9 @@ CHROME = os.environ.get("CHROME_BIN", "/opt/pw-browsers/chromium")
 SHELL = os.environ.get("CHROME_SHELL",
                        "/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell")
 CSS = open(os.path.join(BRAND, "brand.css")).read()
+UICSS = open(os.path.join(BRAND, "ui.css")).read()
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import ui  # noqa: E402
 
 
 def esc(t):
@@ -126,11 +129,11 @@ def slide_html(sl, seal, i, n):
     return f'<section class="slide">{bar(sl, seal)}{body_html(sl)}{foot(sl, i, n)}</section>'
 
 
-def doc(spec, slides, w, h, cw, paged):
+def doc(spec, slides, w, h, cw, paged, extra_css=""):
     c = TOKENS["colourways"][cw]
     vars_ = ";".join(f"--{k}:{v}" for k, v in c.items())
     page = (f"@page{{size:{w}px {h}px;margin:0}}" if paged else "")
-    return (f'<!doctype html><html><head><meta charset="utf-8"><style>{CSS}\n'
+    return (f'<!doctype html><html><head><meta charset="utf-8"><style>{CSS}\n{extra_css}\n'
             f':root{{{vars_};--w:{w}px;--h:{h}px}}{page}</style></head>'
             f'<body>{"".join(slides)}</body></html>')
 
@@ -143,8 +146,34 @@ def chrome(args, binary=None):
     subprocess.run(base + args, check=True, capture_output=True)
 
 
+def render_tour(spec_path):
+    """Annotated interface mockups: one PNG per graphic in the spec."""
+    spec = json.load(open(spec_path))
+    cw = spec.get("colourway", "Carbon")
+    size_key = spec.get("size", "tour_wide")
+    w, h = TOKENS["sizes"][size_key]
+    outdir = os.path.join(os.path.dirname(os.path.dirname(spec_path)), "out")
+    work = os.path.join(outdir, ".work")
+    os.makedirs(work, exist_ok=True)
+    dst = os.path.join(work, "fonts")
+    if not os.path.exists(dst):
+        shutil.copytree(os.path.join(BRAND, "fonts"), dst)
+    made = []
+    for i, g in enumerate(spec["graphics"], 1):
+        stem = f'{spec["id"]}-{i:02d}-{g["slug"]}'
+        hp = os.path.join(work, f"{stem}.html")
+        open(hp, "w").write(doc(spec, [ui.tour_html(g)], w, h,
+                                g.get("colourway", cw), paged=False, extra_css=UICSS))
+        png = os.path.join(outdir, f"{stem}-{w}x{h}.png")
+        chrome([f"--window-size={w},{h}", f"--screenshot={png}", hp], binary=SHELL)
+        made.append(png)
+    return made
+
+
 def render(spec_path, only_size=None):
     spec = json.load(open(spec_path))
+    if "graphics" in spec:
+        return render_tour(spec_path)
     cw = spec.get("colourway", "Carbon")
     seal = spec.get("seal", "STOUT INTEL  ·  STOUTINTEL.COM/SIPS")
     slides = spec["slides"]

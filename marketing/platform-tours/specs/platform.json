@@ -1,0 +1,54 @@
+{
+  "id": "platform",
+  "persona": "all three",
+  "colourway": "Machine",
+  "size": "tour_wide",
+  "graphics": [
+    {
+      "slug": "what-is-on-offer",
+      "layout": "matrix",
+      "cols": 3,
+      "kicker": "STOUT INTEL / WHAT IS ACTUALLY ON OFFER",
+      "h2": "THREE DOORS, AND WHAT IS BEHIND EACH ONE",
+      "meta": ["Source <b>feature inventory 8 August 2026</b>", "Plan <b>product strategy 15 August 2026</b>"],
+      "cards": [
+        {"title": "SIPS platform", "state": "access by request", "items": [
+          "The operations platform: pipeline, projects, clients, quotes, warehouse, tracking",
+          "Absorbs what your team already sends rather than asking them to type",
+          "Runs on your own chat channels and shared links",
+          {"t": "Narrow and honest market today: shops on a compatible system, plus chat based art departments", "off": true}
+        ], "foot": "There is no signup button. That is deliberate."},
+        {"title": "Free tools", "state": "no login", "items": [
+          "Six calculators built for one working sales job",
+          "The same math that used to get done by hand on every quote",
+          "Nothing to fill out, nothing to install",
+          {"t": "Published because the math is not the product", "off": true}
+        ], "foot": "stoutintel.com/resources/tools"},
+        {"title": "A portal account", "state": "free", "items": [
+          "Your live jobs, past orders and tracking",
+          "Proofs to approve on a link with no login",
+          "Messages attached to the job rather than an inbox",
+          {"t": "Built and working. Not yet handed to a client book", "off": true}
+        ], "foot": "Said plainly before you ask."},
+        {"title": "How it fills itself", "state": "the whole design", "items": [
+          "Chat channels watched, posts become records",
+          "Shared links and documents absorbed, no api needed",
+          "Inbound mail captured to a per rep address",
+          {"t": "Shipping is rate lookups only, and cannot see most shipments", "off": true}
+        ], "foot": "Every field a human must type sits at 0 to 15 percent."},
+        {"title": "What it will not do", "state": "boundaries", "items": [
+          "Send anything to anybody without a person pressing send",
+          "Invent a delivery date the carrier never gave",
+          "Show one customer another customer, at any level",
+          "Claim a surface is finished when it is lightly used"
+        ], "foot": "The open items are published, not hidden."},
+        {"title": "How access works", "state": "the process", "items": [
+          "You request access and describe how your shop runs",
+          "I stand it up against your own channels, in the demo tenant",
+          "You see the fill rates on your own data before anything is signed",
+          "Three to five design partners first, then the next phase"
+        ], "foot": "stoutintel.com/sips"}
+      ]
+    }
+  ]
+}

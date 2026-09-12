@@ -1,0 +1,139 @@
+{
+  "id": "owner",
+  "persona": "the shop owner",
+  "colourway": "Carbon",
+  "size": "tour_wide",
+  "graphics": [
+    {
+      "slug": "the-morning-screen",
+      "kicker": "SIPS TOUR / THE SHOP OWNER / 01",
+      "h2": "THE MORNING SCREEN",
+      "meta": ["Surface <b>Dashboard</b>", "Maturity <b>in daily use</b>", "Data <b>demo tenant sample</b>"],
+      "app": {
+        "url": "app.stoutintel.com/dashboard",
+        "nav": ["Dashboard", "Pipeline", "Projects", "Clients", {"t": "Insights", "pin": 5}, "Warehouse", "Settings", "Search"],
+        "active": "Dashboard",
+        "crumb": "Home / Dashboard",
+        "title": "Monday, before anybody asks",
+        "blocks": [
+          {"kind": "statrow", "stats": [
+            {"v": "136", "l": "open deals", "pin": 1},
+            {"v": "18", "l": "stalled, sweep due", "pin": 2},
+            {"v": "9", "l": "jobs in production"},
+            {"v": "4", "l": "waiting on a supplier"}
+          ]},
+          {"kind": "rows", "head": ["Needs attention", "Why it surfaced", "Age"], "rows": [
+            {"cells": ["Sample Systems, conference giveaway", "41 days in stage, no activity", "sweep due"], "pin": 3},
+            ["Sample Brewing, festival drop", "no owner on the record", "2 days"],
+            ["Sample Dental, patient welcome kit", "proof sent, no decision yet", "1 day"],
+            ["Sample Trading, onboarding boxes", "delivered, outcome unknown", "8 days"]
+          ]},
+          {"kind": "panel", "title": "What this screen will not tell you", "pin": 4, "fields": [
+            {"k": "delivery eta", "v": "no carrier eta exists on any shipment", "empty": true},
+            {"k": "line economics", "v": "quote and order lines are not absorbed yet", "empty": true}
+          ], "note": "Both are named in writing on the plan. A silent field beats an invented one."}
+        ]
+      },
+      "key": [
+        {"n": 1, "t": "A number with a source", "d": "Read from the records this morning rather than carried over from a report somebody ran once."},
+        {"n": 2, "t": "Nothing rots quietly", "d": "Stalled work is counted, not discovered. Four short questions every fourteen days, and every answer writes a record."},
+        {"n": 3, "t": "The queue explains itself", "d": "Each row says why it surfaced, so the first question of the day is already answered."},
+        {"n": 4, "t": "The honest gaps, on the screen", "d": "Zero of the recorded shipments carry a carrier eta, so the platform says nothing rather than guessing a date."},
+        {"n": 5, "t": "Reporting over the same records", "d": "Revenue, insights and commissions read the rows the team already works in. No second system to reconcile."}
+      ],
+      "keyfoot": "Reconstruction drawn for this document with sample rows. Not a screenshot of a live book.<br><b>stoutintel.com/sips</b>"
+    },
+    {
+      "slug": "the-controls",
+      "kicker": "SIPS TOUR / THE SHOP OWNER / 02",
+      "h2": "THE CONTROLS YOU ACTUALLY NEED",
+      "meta": ["Surface <b>Settings and Admin</b>", "Maturity <b>in daily use</b>", "Data <b>demo tenant sample</b>"],
+      "app": {
+        "url": "app.stoutintel.com/settings/team",
+        "nav": ["Dashboard", "Pipeline", "Projects", "Clients", "Insights", "Warehouse", "Settings", "Search"],
+        "active": "Settings",
+        "crumb": "Settings / Team",
+        "title": "Who is in here, and what they can reach",
+        "blocks": [
+          {"kind": "rows", "head": ["Person", "Role", "Access"], "rows": [
+            {"cells": ["Sample rep one", "sales", {"chip": "active", "c": "ok"}], "pin": 1},
+            ["Sample rep two", "sales", {"chip": "active", "c": "ok"}],
+            ["Sample coordinator", "production", {"chip": "active", "c": "ok"}],
+            {"cells": ["Sample contractor", "art only", {"chip": "suspended", "c": "hot"}], "pin": 2}
+          ]},
+          {"kind": "buttons", "buttons": [
+            {"t": "Invite", "c": "on"},
+            {"t": "Suspend"},
+            {"t": "Force logout"},
+            {"t": "Reset second factor", "c": ""}
+          ]},
+          {"kind": "panel", "title": "Demo mode", "pin": 3, "fields": [
+            {"k": "state", "v": "on, routed to a parallel empty database"},
+            {"k": "shows", "v": "sample rows, labelled as samples"},
+            {"k": "exposes", "v": "nothing from the real book"}
+          ], "note": "This is how the software gets shown to a prospect. It is not a test environment, and nothing written here reaches production."},
+          {"kind": "panel", "title": "Client portal control, per client", "pin": 4, "fields": [
+            {"k": "link", "v": "copy, rotate the password, or switch it off"},
+            {"k": "scope", "v": "their jobs only, read mostly"}
+          ]}
+        ]
+      },
+      "key": [
+        {"n": 1, "t": "A new hire is a row", "d": "The staff roster lives in the database, so adding somebody is no longer a deployment."},
+        {"n": 2, "t": "Offboarding is one click", "d": "Suspend, reinstate, force a logout, reset a second factor. Separate paths, so a password reset never wipes two factor."},
+        {"n": 3, "t": "Show it without exposing it", "d": "Demo mode routes the browser at an empty parallel database. Every screenshot in this tour comes from there."},
+        {"n": 4, "t": "You own client access", "d": "Per client, set or rotate the password, copy the link, or turn the door off entirely."}
+      ],
+      "keyfoot": "Reconstruction drawn for this document with sample rows. Not a screenshot of a live book.<br><b>stoutintel.com/sips</b>"
+    },
+    {
+      "slug": "the-whole-inventory",
+      "layout": "matrix",
+      "cols": 3,
+      "kicker": "SIPS TOUR / THE SHOP OWNER / 03",
+      "h2": "EVERY SURFACE, AND HOW REAL IT IS",
+      "meta": ["Source <b>feature inventory, 8 August 2026</b>", "Maturity <b>stated, not sold</b>"],
+      "cards": [
+        {"title": "Sales", "state": "mostly daily", "items": [
+          "Pipeline board, stage, value, days in stage",
+          "Hygiene sweep, mandatory every fortnight",
+          "Clients and contacts, activity, cadence, merge",
+          "Order history and the reorder radar",
+          {"t": "Quotes, invoices and purchase orders", "off": true},
+          {"t": "Outreach sequences and campaigns", "off": true}
+        ], "foot": "Grey lines are built and lightly used."},
+        {"title": "Production and supply", "state": "mostly daily", "items": [
+          "Projects, brief through delivered",
+          "Tracking on the job, surfaced to the client",
+          {"t": "Warehouse, floor, inventory, billing, job board", "off": true},
+          {"t": "Suppliers and quote requests", "off": true},
+          {"t": "Mockup studio, art on real product photography", "off": true}
+        ], "foot": "Proof decisions close out at 87 of 89."},
+        {"title": "Working surfaces", "state": "mostly daily", "items": [
+          "Dashboard, the needs attention queue",
+          "Tasks and reminders against any record",
+          "One search across every record type",
+          {"t": "Team board, mentions and attached records", "off": true},
+          {"t": "Phone surface for capture and the warehouse sweep", "off": true}
+        ], "foot": "Eleven people, every working day."},
+        {"title": "Client facing", "state": "not handed over", "items": [
+          {"t": "Client portal, link plus company password", "off": true},
+          {"t": "Reorder shop, no login, cart becomes a quote", "off": true},
+          {"t": "Approvals, no login proof decisions", "off": true}
+        ], "foot": "Built and working. No client book on it yet."},
+        {"title": "Administration", "state": "in use", "items": [
+          "Team settings, invite, suspend, force logout",
+          "Demo mode, a parallel empty database",
+          {"t": "Admin control center, statistics, merge, export", "off": true},
+          {"t": "Per client portal control", "off": true}
+        ], "foot": "The roster is data, not code."},
+        {"title": "Integrations", "state": "how it fills", "items": [
+          "Chat channels watched, posts become records",
+          "Shared links and documents absorbed, no api needed",
+          "Inbound mail captured to a per rep address",
+          {"t": "Shipping rate lookups only, it cannot see most shipments", "off": true}
+        ], "foot": "Absorption is the roadmap. One adapter per system."}
+      ]
+    }
+  ]
+}

@@ -18,8 +18,9 @@ TOKENS = json.load(open(os.path.join(ROOT, "brand", "tokens.json")))
 DASHES = "-‐‑‒–—―−"
 BANNED = [r"Brand\+Aid", r"brand ?aid"]
 MONEY = re.compile(r"[$£€]\s?\d|\b\d+(\.\d+)?\s?(percent margin|margin)\b|\bcommission of\b", re.I)
+# "url" is a mock address bar, not prose, so the dash rule does not apply to it
 SKIP_KEYS = {"id", "slug", "sizes", "colourway", "persona", "anchor", "asset", "file",
-             "_note", "type", "numbered", "on", "off", "wide", "h1size", "hot"}
+             "_note", "type", "numbered", "on", "off", "wide", "h1size", "hot", "url"}
 
 fails, warns = [], []
 
@@ -95,10 +96,16 @@ def render_checks():
                 fails.append(f"{name}: size {im.size}, expected {want}")
         w, h = im.size
         bg = im.getpixel((w - 3, 3))
-        # footer band must carry ink: more than the flat ground and one hairline
-        band = im.crop((60, h - 110, w - 60, h - 20))
-        if len(band.getcolors(maxcolors=200000) or []) < 12:
-            fails.append(f"{name}: footer band looks empty, likely clipped")
+        # carousel slides carry a boundary note and slide number in the bottom band;
+        # tour graphics instead have to prove that content reaches the lower third
+        if os.sep + "carousels" + os.sep in p:
+            band = im.crop((60, h - 110, w - 60, h - 20))
+            if len(band.getcolors(maxcolors=200000) or []) < 12:
+                fails.append(f"{name}: footer band looks empty, likely clipped")
+        else:
+            band = im.crop((40, int(h * 0.66), w - 40, h - 30))
+            if len(band.getcolors(maxcolors=200000) or []) < 12:
+                fails.append(f"{name}: lower third is empty, layout did not fill")
         # nothing but the accent spine may sit in the outer margin
         for box, where in (((10, 0, 40, h), "left"), ((w - 30, 0, w, h), "right"),
                            ((0, 0, w, 20), "top"), ((0, h - 12, w, h), "bottom")):
