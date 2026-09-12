@@ -1,0 +1,116 @@
+{
+  "id": "06",
+  "slug": "one-screen-that-answers-first",
+  "title": "C15 · The owner's screen, and the five questions it answers before you ask",
+  "anchor": "Repository audit at commit ec37b81, 15 August 2026: 104 models, 68 pages, 229 routes, 41 dashboard sections. Live production read the same day.",
+  "persona": "owner",
+  "colourway": "Carbon",
+  "sizes": ["li_doc", "ig_post"],
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "TOUR 02 / THE OWNER",
+      "headline": "FIVE QUESTIONS, <em>ANSWERED BEFORE</em> YOU ASK THEM",
+      "sub": "What the person who owns the shop can see without calling a meeting.",
+      "boundary": "Every screen shown in this document is the demo tenant."
+    },
+    {
+      "type": "list",
+      "kicker": "TOUR 02 / THE QUESTIONS",
+      "h2": "WHAT AN OWNER ASKS ON A MONDAY",
+      "numbered": true,
+      "items": [
+        {"text": "What is actually in the pipeline, not what somebody remembers", "tag": "pipeline"},
+        {"text": "Which jobs are late, and who is waiting on whom", "tag": "projects"},
+        {"text": "What closed this time last year and never came back", "tag": "reorder radar"},
+        {"text": "Which deals have gone quiet and nobody has admitted it", "tag": "hygiene sweep"},
+        {"text": "What my team did all week without asking them to report it", "tag": "activity"}
+      ],
+      "boundary": "Five questions that used to be five conversations."
+    },
+    {
+      "type": "metrics",
+      "kicker": "TOUR 02 / WHAT IS IN THERE",
+      "h2": "ONE DATABASE, READ THIS MORNING",
+      "metrics": [
+        {"value": "136", "label": "deals"},
+        {"value": "196", "label": "production projects"},
+        {"value": "241", "label": "organizations"},
+        {"value": "1,808", "label": "logged activities"},
+        {"value": "4,000", "label": "queued jobs it ran itself"},
+        {"value": "11", "label": "people using it daily"}
+      ],
+      "boundary": "Counted against live production on 15 August 2026, not estimated from the schema."
+    },
+    {
+      "type": "law",
+      "kicker": "TOUR 02 / THE TEST",
+      "quote": "A feature only ships if it can fill its own fields. If it needs somebody to type, it lands at zero and stays there.",
+      "src": "The adoption law. It killed a nine week roadmap in one afternoon.",
+      "boundary": "Four of five recommended modules were rejected on this test alone."
+    },
+    {
+      "type": "compare",
+      "kicker": "TOUR 02 / THE HYGIENE SWEEP",
+      "h2": "THE PIPELINE STAYS HONEST",
+      "left": {"h3": "The usual", "big": "A guess", "p": "A board full of open deals, half of them dead, nobody willing to be the one who closes somebody else's."},
+      "right": {"h3": "Every 14 days", "big": "4 answers", "p": "Still alive, nothing changed, dead, or too late. Every answer writes a real record. It is short and it is mandatory."},
+      "boundary": "The value of a clean pipeline is that the number at the top means something."
+    },
+    {
+      "type": "list",
+      "kicker": "TOUR 02 / WHAT YOU RUN",
+      "h2": "THE OWNER SURFACES",
+      "items": [
+        {"text": "Insights, revenue and commissions over the same records the reps work in", "tag": "reporting"},
+        {"text": "Team settings, invite, suspend, reinstate, force a logout, reset a second factor", "tag": "control"},
+        {"text": "Admin control center, platform statistics, record merging, data export", "tag": "control"},
+        {"text": "Demo mode, a parallel empty database for showing the software to a prospect", "tag": "selling"},
+        {"text": "Per client portal control, set the password, copy the link, switch it off", "tag": "client access"}
+      ],
+      "boundary": "A new hire is a database row now, not a deployment."
+    },
+    {
+      "type": "stat",
+      "kicker": "TOUR 02 / THE HONEST PART",
+      "eyebrow": "SHIPMENTS CARRYING A CARRIER ETA",
+      "value": "0",
+      "label": "of 17 recorded shipments. So the delivery risk engine says nothing rather than inventing a date.",
+      "sub": "One carrier is not entitled on the account, and the rate service cannot see roughly four in five of our shipments. That is an integration to buy, not a feature to fake.",
+      "boundary": "You will get told what it cannot see. That is the point of the tour."
+    },
+    {
+      "type": "table",
+      "kicker": "TOUR 02 / MATURITY",
+      "h2": "WHAT IS REAL TODAY",
+      "head": ["Surface", "State"],
+      "rows": [
+        ["Pipeline, projects, clients, tracking, search", "daily use"],
+        ["Quotes, invoices, purchase orders, warehouse", "built, light use"],
+        ["Mockup studio, outreach, reporting", "built, light use"],
+        ["Client portal, reorder shop", "not yet handed over", true],
+        ["Line item economics", "absorption work, unscoped", true]
+      ],
+      "boundary": "Maturity here is honest rather than promotional. The open items are on the page too."
+    },
+    {
+      "type": "body",
+      "kicker": "TOUR 02 / THE LINE",
+      "h2": "WHAT I WILL TELL YOU FIRST",
+      "lede": [
+        "The data richness comes from absorbing what your team already sends. A shop on a different system installs this and gets an empty database.",
+        "So the honest market today is narrow and specific, and the roadmap is one absorption adapter per system rather than more modules. I would rather say that out loud than sell you a pilot that starves."
+      ],
+      "boundary": "Said before the demo, not after the invoice."
+    },
+    {
+      "type": "cta",
+      "kicker": "TOUR 02 / ACCESS",
+      "h2": "REQUEST ACCESS, NOT A TRIAL",
+      "lede": ["I will run it against your own channels and show you the fill rates on your own data before anybody signs anything."],
+      "pills": [{"t": "Three to five design partners", "on": true}, {"t": "Your Slack, your links"}, {"t": "Demo tenant first"}],
+      "cta": "stoutintel.com/sips",
+      "boundary": "Phase one does not advance until partners beat their own baseline."
+    }
+  ]
+}

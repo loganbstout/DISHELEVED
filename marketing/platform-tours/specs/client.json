@@ -1,0 +1,336 @@
+{
+  "id": "client",
+  "persona": "the client",
+  "colourway": "Bone",
+  "size": "tour_wide",
+  "graphics": [
+    {
+      "slug": "the-portal",
+      "kicker": "SIPS TOUR / THE CLIENT / 01",
+      "h2": "WHAT YOUR CLIENT SEES",
+      "meta": [
+        "Surface <b>Client portal</b>",
+        "Maturity <b>built, not handed over</b>",
+        "Data <b>demo tenant sample</b>"
+      ],
+      "app": {
+        "url": "portal.stoutintel.com/sample-athletics",
+        "nav": [
+          "My jobs",
+          "Past orders",
+          "Approvals",
+          "Messages",
+          "Reorder"
+        ],
+        "active": "My jobs",
+        "crumb": "Sample Athletics / My jobs",
+        "title": "Your jobs, right now",
+        "blocks": [
+          {
+            "kind": "rows",
+            "head": [
+              "Job",
+              "Where it is",
+              "In hands"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Spring team kit, 240 pieces",
+                  "in production at the supplier",
+                  "12 days"
+                ],
+                "pin": 1
+              },
+              {
+                "cells": [
+                  "Patient welcome kit, 500 pieces",
+                  "proof waiting on you",
+                  "26 days"
+                ],
+                "pin": 2
+              },
+              [
+                "Retail reorder, 120 pieces",
+                "shipped, 2 of 3 boxes delivered",
+                "arriving"
+              ],
+              [
+                "Onboarding boxes, 80 pieces",
+                "delivered in full",
+                "complete"
+              ]
+            ]
+          },
+          {
+            "kind": "panel",
+            "title": "Retail reorder, tracking",
+            "pin": 3,
+            "fields": [
+              {
+                "k": "box 1 of 3",
+                "v": "delivered"
+              },
+              {
+                "k": "box 2 of 3",
+                "v": "delivered"
+              },
+              {
+                "k": "box 3 of 3",
+                "v": "in transit"
+              },
+              {
+                "k": "estimated arrival",
+                "v": "the carrier has not given one",
+                "empty": true,
+                "pin": 4
+              }
+            ],
+            "note": "The platform will not invent a date the carrier never gave it."
+          },
+          {
+            "kind": "rows",
+            "head": [
+              "What you will never find in here",
+              "",
+              ""
+            ],
+            "rows": [
+              [
+                "Your cost, the supplier, or any margin",
+                "not stored on this door",
+                {
+                  "chip": "never",
+                  "c": "hot"
+                }
+              ],
+              [
+                "Any other customer of theirs",
+                "isolated by account",
+                {
+                  "chip": "never",
+                  "c": "hot"
+                }
+              ]
+            ]
+          }
+        ],
+        "urlpin": 5
+      },
+      "key": [
+        {
+          "n": 1,
+          "t": "A live job, in plain words",
+          "d": "The status ladder says where the work actually is, not a colour code you have to learn."
+        },
+        {
+          "n": 2,
+          "t": "The ball comes to you",
+          "d": "When a decision is yours, the portal says so. Proofs go out on a link with no login to remember."
+        },
+        {
+          "n": 3,
+          "t": "Tracking, per box",
+          "d": "Multiple boxes on one job are shown as multiple boxes, because that is what shipped."
+        },
+        {
+          "n": 4,
+          "t": "A blank that tells the truth",
+          "d": "No carrier eta exists on any recorded shipment, so it says so rather than guessing at a Tuesday."
+        },
+        {
+          "n": 5,
+          "t": "One door, one account",
+          "d": "A link and a company password. No seat to buy, no software to install, nothing to keep up to date."
+        }
+      ],
+      "keyfoot": "Reconstruction drawn for this document with sample rows. Not a screenshot of a live book.<br><b>stoutintel.com/sips</b>"
+    },
+    {
+      "slug": "the-approval",
+      "kicker": "SIPS TOUR / THE CLIENT / 02",
+      "h2": "TWO BUTTONS, SIX MINUTES",
+      "meta": [
+        "Surface <b>Approvals</b>",
+        "Maturity <b>in use, no login</b>",
+        "Data <b>demo tenant sample</b>"
+      ],
+      "app": {
+        "url": "portal.stoutintel.com/approve/sample-welcome-kit",
+        "nav": [
+          "My jobs",
+          "Past orders",
+          "Approvals",
+          "Messages",
+          "Reorder"
+        ],
+        "active": "Approvals",
+        "crumb": "Approval / Patient welcome kit",
+        "title": "Proof for your approval",
+        "blocks": [
+          {
+            "kind": "panel",
+            "title": "What you are approving",
+            "pin": 1,
+            "fields": [
+              {
+                "k": "item",
+                "v": "Patient welcome kit, 500 pieces"
+              },
+              {
+                "k": "decoration",
+                "v": "one colour, left chest and back neck"
+              },
+              {
+                "k": "artwork",
+                "v": "your file, placed on the real product photo"
+              },
+              {
+                "k": "in hands date",
+                "v": "holds if approved today"
+              }
+            ]
+          },
+          {
+            "kind": "buttons",
+            "buttons": [
+              {
+                "t": "Approve",
+                "c": "on",
+                "pin": 2
+              },
+              {
+                "t": "Request a change"
+              },
+              {
+                "t": "Ask a question"
+              }
+            ]
+          },
+          {
+            "kind": "thread",
+            "messages": [
+              {
+                "w": "You, if you press request a change",
+                "x": "The logo sits slightly low on the back neck.",
+                "side": "them",
+                "pin": 3
+              },
+              {
+                "w": "Filed against the job, not an inbox",
+                "x": "The change request reaches the art team with the proof attached, and the clock on the job carries on running."
+              }
+            ]
+          },
+          {
+            "kind": "panel",
+            "title": "The receipt",
+            "pin": 4,
+            "fields": [
+              {
+                "k": "decided by",
+                "v": "your name, captured on the click"
+              },
+              {
+                "k": "decided at",
+                "v": "the minute you pressed it"
+              },
+              {
+                "k": "kept",
+                "v": "on the job for as long as the job exists"
+              }
+            ],
+            "note": "Nobody has to remember who said yes. 87 of 89 proofs were closed out this way, at a six minute median."
+          }
+        ]
+      },
+      "key": [
+        {
+          "n": 1,
+          "t": "Everything on one screen",
+          "d": "The item, the decoration, your artwork on the real product photo, and what approving today protects."
+        },
+        {
+          "n": 2,
+          "t": "Two buttons, no account",
+          "d": "No login to hunt for. The version of this that asked people to sign in died at zero rows across six tables."
+        },
+        {
+          "n": 3,
+          "t": "A change is not an email",
+          "d": "It files against the job with the proof attached, so nothing gets retyped and nothing gets lost in a thread."
+        },
+        {
+          "n": 4,
+          "t": "A receipt with a name on it",
+          "d": "Who decided and when, kept on the job. This is the single most adopted thing in the platform."
+        }
+      ],
+      "keyfoot": "Reconstruction drawn for this document with sample rows. Not a screenshot of a live book.<br><b>stoutintel.com/sips</b>"
+    },
+    {
+      "slug": "what-the-client-gets",
+      "layout": "matrix",
+      "cols": 3,
+      "kicker": "SIPS TOUR / THE CLIENT / 03",
+      "h2": "WHAT YOUR CLIENT GETS, NEVER SEES, AND NEVER PAYS FOR",
+      "meta": [
+        "Persona <b>the client</b>",
+        "Source <b>feature inventory, 8 August 2026</b>"
+      ],
+      "cards": [
+        {
+          "title": "What they get",
+          "state": "behind one link",
+          "items": [
+            "Live jobs with a status in plain words",
+            "Tracking per box, the moment it exists",
+            "Past orders, so a reorder starts from fact",
+            "Proofs to approve with no login",
+            "Messages attached to the job itself"
+          ],
+          "foot": "A link plus a company password."
+        },
+        {
+          "title": "What they never see",
+          "state": "by design",
+          "items": [
+            {
+              "t": "Your cost, your supplier, your margin",
+              "off": true
+            },
+            {
+              "t": "Any other client or job",
+              "off": true
+            },
+            {
+              "t": "Internal notes or team discussion",
+              "off": true
+            },
+            {
+              "t": "Your pipeline, ever",
+              "off": true
+            },
+            {
+              "t": "A file on a public link, every bucket is private",
+              "off": true
+            }
+          ],
+          "foot": "The delivery paperwork carries no money and cannot."
+        },
+        {
+          "title": "What it costs them",
+          "state": "nothing",
+          "items": [
+            "No seat, no subscription, no minimum",
+            "No app to install or keep updated",
+            "No training, the door is four pages",
+            "No password to invent, you set and rotate it",
+            "No lock in, you can switch the door off"
+          ],
+          "foot": "Friction is how reorders die."
+        }
+      ]
+    }
+  ]
+}

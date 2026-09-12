@@ -1,0 +1,85 @@
+{
+  "id": "10",
+  "slug": "paid-is-not-done",
+  "title": "B41 · Paid is not done, and delivered is not done either",
+  "anchor": "Build 24, the paid job that stayed open; the delivery loop follow up drafted 9 September 2026",
+  "persona": "rep",
+  "colourway": "Cobalt",
+  "sizes": ["li_doc", "ig_post"],
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "41 / BUILD",
+      "headline": "PAID IS NOT DONE. <em>DELIVERED IS NOT DONE</em> EITHER.",
+      "sub": "The box arrived on time and I still had no idea whether the client was happy.",
+      "boundary": "No client, job or order in this document is a real one."
+    },
+    {
+      "type": "body",
+      "kicker": "41 / THE FIRST FALSE FINISH",
+      "h2": "A JOB THAT WAS FINISHED, DELIVERED AND PAID",
+      "lede": [
+        "It sat open on our board for weeks. Nobody forgot on purpose. There was simply no moment in anybody's day that said this one is over now.",
+        "The money had landed. The board still showed it as work."
+      ],
+      "boundary": "Which means every number read off that board was wrong for weeks."
+    },
+    {
+      "type": "compare",
+      "kicker": "41 / TWO FALSE FINISHES",
+      "h2": "WHERE JOBS GO TO DIE QUIETLY",
+      "left": {"h3": "Paid", "big": "Still open", "p": "Accounting is satisfied, the board is not updated, and the rep has moved on to the next fire."},
+      "right": {"h3": "Delivered", "big": "Still unknown", "p": "The tracking says delivered. Nobody has asked a human being whether the thing was right."},
+      "boundary": "Two different endings, both of them treated as the same word."
+    },
+    {
+      "type": "list",
+      "kicker": "41 / THE LOOP",
+      "h2": "WHAT CLOSES A JOB NOW",
+      "numbered": true,
+      "items": [
+        {"text": "Delivery lands and the job stops asking for attention", "tag": "automatic"},
+        {"text": "A week later the system drafts one short message", "tag": "automatic"},
+        {"text": "I read it, change a word, and press send", "tag": "human"},
+        {"text": "The answer gets filed against the job, not my inbox", "tag": "automatic"},
+        {"text": "Only then does the job read as closed", "tag": "automatic"}
+      ],
+      "boundary": "Four of the five steps ask nothing of anybody. Step three is the whole job."
+    },
+    {
+      "type": "stat",
+      "kicker": "41 / THE ASK",
+      "eyebrow": "WHAT THE HUMAN HAS TO DO",
+      "value": "1",
+      "label": "press of send, on a message that is already written and already knows which job it is about.",
+      "sub": "Every field this loop needs is a field a machine already fills. That is the only reason it will still be running in six months.",
+      "boundary": "A follow up that needs somebody to remember is a follow up that stops in week three."
+    },
+    {
+      "type": "law",
+      "kicker": "41 / THE RULE",
+      "quote": "If a step in your process depends on somebody feeling like it, that step does not exist. Write it down as not existing.",
+      "src": "Measured version: every field a human must type here sits between 0 and 15 percent filled.",
+      "boundary": "The loop was built to survive a bad week, not a good one."
+    },
+    {
+      "type": "body",
+      "kicker": "41 / THE PORTABLE PART",
+      "h2": "YOU CAN RUN THIS WITHOUT SOFTWARE",
+      "lede": [
+        "Pick your last twenty delivered jobs. Count how many of them you actually know the outcome of. Not the tracking status, the outcome.",
+        "Then ask what would have had to happen for you to know. In most shops it is one message, a week late, that nobody owns."
+      ],
+      "boundary": "The gap is never the sending. It is the remembering."
+    },
+    {
+      "type": "cta",
+      "kicker": "41 / ACCESS",
+      "h2": "SEE THE LOOP ON YOUR OWN JOBS",
+      "lede": ["Access is by request rather than a signup button, and I will show it against your own channels."],
+      "pills": [{"t": "Nothing sends itself", "on": true}, {"t": "Filed against the job", "on": true}, {"t": "Built by a working rep"}],
+      "cta": "stoutintel.com/sips",
+      "boundary": "Demo tenant for the walkthrough."
+    }
+  ]
+}

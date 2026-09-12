@@ -1,0 +1,85 @@
+{
+  "id": "08",
+  "slug": "what-would-the-second-customer-see",
+  "title": "B39 · What would the second customer see?",
+  "anchor": "Phase 1 tenant isolation and permission hardening, SIPS product strategy 15 August 2026; the single tenant column found in the schema audit at ec37b81",
+  "persona": "owner",
+  "colourway": "Machine",
+  "sizes": ["li_doc", "ig_post"],
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "39 / BUILD",
+      "headline": "WHAT WOULD THE <em>SECOND CUSTOMER</em> SEE?",
+      "sub": "I asked one question before letting anybody else onto my platform, and it stopped the pilot.",
+      "boundary": "No customer data of any kind appears in this document."
+    },
+    {
+      "type": "body",
+      "kicker": "39 / THE QUESTION",
+      "h2": "ONE QUESTION, ASKED LATE",
+      "lede": [
+        "I had a working platform, eleven people in it every day, and three shops interested in a pilot. So I went looking for the thing that would embarrass me.",
+        "Not a bug. A shape. If a second company signed in tomorrow, what could they see that was not theirs?"
+      ],
+      "boundary": "Asked before the pilot, which is the only time the answer is cheap."
+    },
+    {
+      "type": "stat",
+      "kicker": "39 / THE FINDING",
+      "eyebrow": "THE THING THAT BLOCKED THE SALE",
+      "value": "1",
+      "label": "column. That was the whole blocker. Not a module, not a redesign, one column that assumed there would only ever be one company in here.",
+      "sub": "Software written for one shop grows a quiet assumption in every table. Mine had grown it 104 models deep.",
+      "boundary": "104 models, 68 pages, 229 routes, read from the repository rather than remembered."
+    },
+    {
+      "type": "list",
+      "kicker": "39 / WHAT ISOLATION MEANS",
+      "h2": "FIVE THINGS THAT HAVE TO BE TRUE",
+      "numbered": true,
+      "items": [
+        {"text": "Every row knows which company it belongs to", "tag": "data"},
+        {"text": "Every query is filtered by that before it reaches a page", "tag": "read"},
+        {"text": "Every file sits in a private bucket served to one session", "tag": "storage"},
+        {"text": "Every integration writes back to the tenant that owns it", "tag": "inbound"},
+        {"text": "Every one of those has a test that fails loudly when it breaks", "tag": "proof"}
+      ],
+      "boundary": "The fifth one is the one people skip, and it is the only one that keeps holding after you forget."
+    },
+    {
+      "type": "compare",
+      "kicker": "39 / THE CHOICE",
+      "h2": "TWO WAYS TO FIND THIS OUT",
+      "left": {"h3": "The expensive way", "big": "Pilot first", "p": "Sign a design partner, load their book, and discover the assumption when somebody sees a name they should not have seen."},
+      "right": {"h3": "The cheap way", "big": "Ask first", "p": "Spend three weeks on isolation and permissions before anybody else has an account. Nobody is watching, so nothing is at stake."},
+      "boundary": "Same work either way. Wildly different day."
+    },
+    {
+      "type": "law",
+      "kicker": "39 / THE RULE",
+      "quote": "Before you sell software to a second customer, go and find the place where you assumed there would only ever be one.",
+      "src": "It is always there. Software that grew inside one company always has it.",
+      "boundary": "This applies to a spreadsheet you share as much as a platform you host."
+    },
+    {
+      "type": "body",
+      "kicker": "39 / THE GATE",
+      "h2": "WHAT THE PHASE WILL NOT DO",
+      "lede": [
+        "Phase one is isolation, a repeatable install, a partner scorecard and a proof receipt. No new modules.",
+        "It does not advance until three to five shops are running it on their own Slack and beating their own baseline. If that does not happen, more features would not have saved it anyway."
+      ],
+      "boundary": "Written as a stop gate so that I cannot talk myself past it later."
+    },
+    {
+      "type": "cta",
+      "kicker": "39 / ACCESS",
+      "h2": "PILOTS OPEN WHEN ISOLATION CLOSES",
+      "lede": ["If you run a promo shop and want to be one of the first three, the door is a request rather than a signup."],
+      "pills": [{"t": "Three to five partners", "on": true}, {"t": "Your own Slack"}, {"t": "No seat count yet"}],
+      "cta": "stoutintel.com/sips",
+      "boundary": "Demo tenant for every walkthrough until then."
+    }
+  ]
+}

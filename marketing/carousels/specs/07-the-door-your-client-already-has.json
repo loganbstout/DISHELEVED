@@ -1,0 +1,98 @@
+{
+  "id": "07",
+  "slug": "the-door-your-client-already-has",
+  "title": "C16 · The client's door, and the email they never have to send",
+  "anchor": "Client portal and reorder shop, feature inventory 8 August 2026; tracking surfaced to the portal in daily use",
+  "persona": "client",
+  "colourway": "Bone",
+  "sizes": ["li_doc", "ig_post"],
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "TOUR 03 / THE CLIENT",
+      "headline": "THE EMAIL YOUR CLIENT <em>NEVER HAS TO SEND</em>",
+      "sub": "A client should not have to ask a human where their own order is.",
+      "boundary": "Demo tenant throughout. No real client, no real order."
+    },
+    {
+      "type": "body",
+      "kicker": "TOUR 03 / THE QUESTION",
+      "h2": "WHERE IS MY ORDER",
+      "lede": [
+        "It is the most common question in this business and the least interesting work in it. Somebody reads an email, opens three screens, copies a tracking number, and writes a reply that says in transit.",
+        "The client did not want a reply. They wanted the answer."
+      ],
+      "boundary": "Answering it used to take three screens on my side."
+    },
+    {
+      "type": "list",
+      "kicker": "TOUR 03 / THE DOOR",
+      "h2": "WHAT IS BEHIND THE LINK",
+      "numbered": true,
+      "items": [
+        {"text": "Live jobs, with the status ladder from brief through delivered", "tag": "portal"},
+        {"text": "Past orders, so a reorder starts from what they actually bought", "tag": "portal"},
+        {"text": "Carrier and tracking on the job, the moment it exists", "tag": "portal"},
+        {"text": "Messages on the specific job, not a shared inbox thread", "tag": "portal"},
+        {"text": "A proof to approve, on a link with no login to remember", "tag": "approvals"}
+      ],
+      "boundary": "A link plus a company password. No seat to buy, no app to install."
+    },
+    {
+      "type": "compare",
+      "kicker": "TOUR 03 / THE REORDER",
+      "h2": "BUYING THE SAME THING AGAIN",
+      "left": {"h3": "The usual", "big": "4 emails", "p": "What did we order last time, do you still have the art, what did it cost, can you send a quote."},
+      "right": {"h3": "The shop", "big": "1 cart", "p": "A catalogue of what that client has already bought. The cart becomes a real quote on my side, with the artwork already attached."},
+      "boundary": "No login on the reorder shop by design. Friction is how reorders die."
+    },
+    {
+      "type": "stat",
+      "kicker": "TOUR 03 / THE ARTWORK",
+      "eyebrow": "PROOF DECISIONS CLOSED OUT",
+      "value": "98%",
+      "label": "at a six minute median, because approving a proof is one link and two buttons.",
+      "sub": "The suite that asked people to log in and hunt for the file died at zero rows across six tables.",
+      "boundary": "Every decision writes a receipt with a name and a time on it."
+    },
+    {
+      "type": "list",
+      "kicker": "TOUR 03 / WHAT THEY CANNOT SEE",
+      "h2": "THE WALLS ARE DELIBERATE",
+      "items": [
+        {"text": "Your cost, your supplier, your margin, ever", "tag": "never"},
+        {"text": "Any other client, any other job, any other contact", "tag": "never"},
+        {"text": "Internal notes, team discussion, the pipeline", "tag": "never"},
+        {"text": "Files from a public link, every bucket is private and served to a session", "tag": "closed"},
+        {"text": "The portal is read mostly, so a client cannot edit your record", "tag": "closed"}
+      ],
+      "boundary": "A receipt goes out with no money on it, and physically cannot carry any."
+    },
+    {
+      "type": "body",
+      "kicker": "TOUR 03 / STATE OF IT",
+      "h2": "WHERE THIS HONESTLY SITS",
+      "lede": [
+        "The portal and the reorder shop are built and working, and they have not been handed to a client book yet.",
+        "Two things are open before they are. Somebody has to be told when a client messages a job nobody owns, and the order totals in the portal need to come from the invoice rather than a summary. Both are on the page, in writing, where the team can read them."
+      ],
+      "boundary": "Built, not yet handed over. Said plainly on purpose."
+    },
+    {
+      "type": "law",
+      "kicker": "TOUR 03 / THE RULE",
+      "quote": "Nothing leaves the building without a person. Six systems in here write email, and not one of them can press send.",
+      "src": "Which is also why your client never gets a status update that turned out to be a guess.",
+      "boundary": "No automated message has ever reached a client from this platform unsent by a human."
+    },
+    {
+      "type": "cta",
+      "kicker": "TOUR 03 / ACCESS",
+      "h2": "WANT THE DOOR ON YOUR OWN BOOK",
+      "lede": ["Access is by request. I will stand it up against your own jobs and let you click it before you decide anything."],
+      "pills": [{"t": "Link plus password", "on": true}, {"t": "No client seat to buy", "on": true}, {"t": "Private buckets"}],
+      "cta": "stoutintel.com/sips",
+      "boundary": "Demo tenant for the walkthrough. Your book stays yours."
+    }
+  ]
+}

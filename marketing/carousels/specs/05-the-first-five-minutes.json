@@ -1,0 +1,116 @@
+{
+  "id": "05",
+  "slug": "the-first-five-minutes",
+  "title": "C14 · The first five minutes, and what nobody had to type",
+  "anchor": "Build 46 adoption law, measured against live production 15 August 2026; Slack proof loop at 98 percent",
+  "persona": "rep",
+  "colourway": "Cobalt",
+  "sizes": ["li_doc", "ig_post"],
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "TOUR 01 / THE REP",
+      "headline": "THE FIRST FIVE MINUTES, AND <em>NOBODY TYPED</em> A THING",
+      "sub": "What a sales rep's software should already know by the time they open it.",
+      "boundary": "Screens in this document are the demo tenant. No client book, no live records."
+    },
+    {
+      "type": "law",
+      "kicker": "TOUR 01 / THE LAW",
+      "quote": "Every field a human must type sits at 0 to 15 percent filled. Every field a machine writes sits at 50 to 100 percent.",
+      "src": "Measured against live production, 15 August 2026. 11 users, nine months of history.",
+      "boundary": "One system, 136 deals, 196 projects, 89 purchase orders at time of reading."
+    },
+    {
+      "type": "table",
+      "kicker": "TOUR 01 / THE RECEIPT",
+      "h2": "ASKED A HUMAN TO TYPE IT",
+      "head": ["Field", "Filled"],
+      "rows": [
+        ["The back planned deadline chain", "0 of 136", true],
+        ["In hands date confirmed firm", "0 of 136", true],
+        ["Expected delivery on a purchase order", "0 of 89", true],
+        ["Who has the ball right now", "2 of 136", true],
+        ["Is this job a rush", "1 of 136", true]
+      ],
+      "boundary": "Nobody was lazy. Nine months of a working team, and the answer was still nearly zero."
+    },
+    {
+      "type": "table",
+      "kicker": "TOUR 01 / THE RECEIPT",
+      "h2": "A MACHINE WROTE IT INSTEAD",
+      "head": ["Field", "Filled"],
+      "rows": [
+        ["Proof decisions closed out", "87 of 89"],
+        ["Job links absorbed off a shared link", "71 of 136"],
+        ["Art requests opened from a chat post", "117 rows"],
+        ["Activity logged against a record", "1,808 rows"],
+        ["Queued work the system ran itself", "4,000 rows"]
+      ],
+      "boundary": "Same team, same nine months. The only difference was whether it asked anybody for anything."
+    },
+    {
+      "type": "list",
+      "kicker": "TOUR 01 / THE ASK",
+      "h2": "WHAT A REP ACTUALLY DOES",
+      "numbered": true,
+      "items": [
+        {"text": "Forward the email you were going to forward anyway", "tag": "deal opens"},
+        {"text": "Post the update in the channel you already post in", "tag": "job files itself"},
+        {"text": "Paste the link you already send the client", "tag": "quote absorbed"},
+        {"text": "Say yes or no to a proof", "tag": "production starts"},
+        {"text": "Answer four questions about a stale deal", "tag": "pipeline stays true"}
+      ],
+      "boundary": "That is the whole list. There is no sixth thing."
+    },
+    {
+      "type": "compare",
+      "kicker": "TOUR 01 / BEFORE AND AFTER",
+      "h2": "LOGGING ONE NEW JOB",
+      "left": {"h3": "The old way", "big": "9 fields", "p": "Open the record, retype the company, the contact, the date, the quantity, the ship to, the notes. Then remember to come back and close it."},
+      "right": {"h3": "Now", "big": "1 forward", "p": "The email you already sent becomes the deal, the contact and the first activity line. You were copied on it anyway."},
+      "boundary": "The sender is read as a person at a company, never as the company itself."
+    },
+    {
+      "type": "stat",
+      "kicker": "TOUR 01 / ADOPTION",
+      "eyebrow": "PROOF LOOP, FIRST WEEK",
+      "value": "98%",
+      "label": "of proof decisions closed out, at a six minute median, with no training session and no reminder email.",
+      "sub": "The mockup suite it replaced died at zero rows across six tables. Same team. Same month.",
+      "boundary": "Adoption is a design result, not a discipline problem."
+    },
+    {
+      "type": "list",
+      "kicker": "TOUR 01 / SURFACES",
+      "h2": "WHERE A REP LIVES",
+      "items": [
+        {"text": "Pipeline board, deals by stage with days in stage on the card", "tag": "daily"},
+        {"text": "Projects, brief through delivered, with the message thread on the job", "tag": "daily"},
+        {"text": "Clients and contacts, with the reorder radar calling last year's list", "tag": "daily"},
+        {"text": "One search across every record type", "tag": "daily"},
+        {"text": "A phone surface built for capture, not a shrunken desktop", "tag": "field"}
+      ],
+      "boundary": "Quotes, invoices and purchase orders sit one click off the same record."
+    },
+    {
+      "type": "body",
+      "kicker": "TOUR 01 / THE LINE",
+      "h2": "WHAT IT WILL NOT DO",
+      "lede": [
+        "Six systems in here write email. Not one of them can send on its own.",
+        "It will not invent a delivery date it was never told. Zero of the recorded shipments carry a carrier ETA, so the risk engine stays quiet instead of guessing. I would rather it say nothing than say Tuesday."
+      ],
+      "boundary": "Nothing leaves the building without a person pressing send."
+    },
+    {
+      "type": "cta",
+      "kicker": "TOUR 01 / ACCESS",
+      "h2": "THERE IS NO SIGN UP BUTTON",
+      "lede": ["Access is by request, and I will show it against your own channels rather than a slide."],
+      "pills": [{"t": "Promo shops", "on": true}, {"t": "Slack art departments", "on": true}, {"t": "Built by a working rep"}],
+      "cta": "stoutintel.com/sips",
+      "boundary": "Demo tenant for every walkthrough. Your book never touches mine."
+    }
+  ]
+}

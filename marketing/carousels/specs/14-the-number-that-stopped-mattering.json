@@ -1,0 +1,86 @@
+{
+  "id": "14",
+  "slug": "the-number-that-stopped-mattering",
+  "title": "C12 · The scary number that had already stopped mattering",
+  "anchor": "A figure carried for five weeks before being checked at the source, September 2026",
+  "persona": "owner",
+  "colourway": "Carbon",
+  "sizes": ["li_doc", "ig_post"],
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "LESSON / AVOIDANCE",
+      "headline": "THE SCARY NUMBER THAT HAD <em>ALREADY STOPPED</em> MATTERING",
+      "sub": "I carried it around for five weeks like a debt. Then I looked, and it had already been paid.",
+      "boundary": "No figures from anybody else's business appear in this document."
+    },
+    {
+      "type": "stat",
+      "kicker": "LESSON / THE COST",
+      "eyebrow": "TIME SPENT CARRYING IT",
+      "value": "5",
+      "label": "weeks of low grade dread, against the ninety seconds it took to check once I finally did.",
+      "sub": "Nobody was hiding it from me. I had simply decided in advance what the answer was going to be.",
+      "boundary": "The number itself turned out to be old."
+    },
+    {
+      "type": "list",
+      "kicker": "LESSON / THE SHAPE",
+      "h2": "HOW A STALE NUMBER SURVIVES",
+      "numbered": true,
+      "items": [
+        {"text": "You hear it once, in a hurry, from a system you trust", "tag": "day one"},
+        {"text": "You build a plan around it instead of checking it", "tag": "week one"},
+        {"text": "Checking now means admitting you planned on a guess", "tag": "week two"},
+        {"text": "The dread becomes the reason not to look", "tag": "week three"},
+        {"text": "The number changes and nothing tells you", "tag": "week four"}
+      ],
+      "boundary": "Step three is where it actually gets expensive."
+    },
+    {
+      "type": "compare",
+      "kicker": "LESSON / WHAT IT COST",
+      "h2": "THE TWO PRICES",
+      "left": {"h3": "The number", "big": "Already paid", "p": "Handled, resolved, closed. It had stopped being true weeks before I got around to being afraid of it."},
+      "right": {"h3": "The carrying", "big": "Five weeks", "p": "Decisions deferred, a plan built sideways around a thing that was not there, and attention spent on nothing."},
+      "boundary": "The carrying cost exceeded the number. That is the part worth saying out loud."
+    },
+    {
+      "type": "law",
+      "kicker": "LESSON / THE RULE",
+      "quote": "Go and look. A number you are afraid of is a number you have stopped measuring, and it is probably no longer the number.",
+      "src": "The same instinct that made me count fill rates instead of trusting a report.",
+      "boundary": "Every claim in my posts carries a date for exactly this reason."
+    },
+    {
+      "type": "body",
+      "kicker": "LESSON / THE FIX",
+      "h2": "WHAT I CHANGED",
+      "lede": [
+        "Anything I am avoiding gets a date and a source written next to it. If I cannot say where a number came from and when, it is not a number, it is a mood.",
+        "And the check goes in the calendar the same afternoon, because the whole failure mode is the deferral rather than the arithmetic."
+      ],
+      "boundary": "Dated at the source, or it does not get quoted."
+    },
+    {
+      "type": "list",
+      "kicker": "LESSON / PORTABLE",
+      "h2": "THE THREE IN EVERY SHOP",
+      "items": [
+        {"text": "The receivable you are sure is still outstanding", "tag": "go look"},
+        {"text": "The client you assume has left", "tag": "go look"},
+        {"text": "The subscription you think you need", "tag": "go look"}
+      ],
+      "boundary": "One afternoon, three checks, and at least one of them will be out of date."
+    },
+    {
+      "type": "cta",
+      "kicker": "LESSON / ACCESS",
+      "h2": "THE SYSTEM THAT MAKES ME LOOK",
+      "lede": ["Every stale deal gets four questions every fourteen days, and every answer writes a record. Promo shops can request access."],
+      "pills": [{"t": "Hygiene sweep", "on": true}, {"t": "Dated receipts", "on": true}, {"t": "Access by request"}],
+      "cta": "stoutintel.com/sips",
+      "boundary": "Demo tenant for every walkthrough."
+    }
+  ]
+}
