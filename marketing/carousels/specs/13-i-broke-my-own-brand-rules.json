@@ -1,0 +1,85 @@
+{
+  "id": "13",
+  "slug": "i-broke-my-own-brand-rules",
+  "title": "C13 · I wrote the brand rules, then broke them thirteen times",
+  "anchor": "Brand kit coding system, 5 September 2026; the machine gate that now reads every asset before it is scheduled",
+  "persona": "owner",
+  "colourway": "Bone",
+  "sizes": ["li_doc", "ig_post"],
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "LESSON / STANDARDS",
+      "headline": "I WROTE THE BRAND RULES, THEN BROKE THEM <em>THIRTEEN TIMES</em>",
+      "sub": "I shipped thirteen assets that broke my own written standard, and I caught none of them by eye.",
+      "boundary": "Counted across one batch of assets, not a guess."
+    },
+    {
+      "type": "body",
+      "kicker": "LESSON / THE SETUP",
+      "h2": "I WAS THE ONE WHO WROTE IT DOWN",
+      "lede": [
+        "A colour per section, a shape per status, a fixed set of colourways, and a short list of things the copy never does.",
+        "Then I produced a run of assets at speed, checked them the way everybody checks their own work, and pushed them out."
+      ],
+      "boundary": "Knowing the rule is not the same as enforcing it."
+    },
+    {
+      "type": "stat",
+      "kicker": "LESSON / THE COUNT",
+      "eyebrow": "BREAKS I FOUND ON MY OWN WORK",
+      "value": "13",
+      "label": "assets out of one batch broke the standard I had written myself, and reviewing them by eye had cleared every one.",
+      "sub": "Nothing exotic. A wrong ground colour, a banned word in a headline, a punctuation mark the house style does not use.",
+      "boundary": "Found by a checker, not by looking harder."
+    },
+    {
+      "type": "list",
+      "kicker": "LESSON / THE GATE",
+      "h2": "WHAT A MACHINE READS BEFORE ANYTHING SHIPS",
+      "numbered": true,
+      "items": [
+        {"text": "No client name anywhere in copy or on a slide", "tag": "hard stop"},
+        {"text": "No supplier tied to a named job", "tag": "hard stop"},
+        {"text": "No margin, no pay, no money figures", "tag": "hard stop"},
+        {"text": "No screenshot of a live book, demo tenant only", "tag": "hard stop"},
+        {"text": "Never open on the words everybody opens on", "tag": "style"},
+        {"text": "Zero of one punctuation mark the house style does not use", "tag": "style"}
+      ],
+      "boundary": "Six rules, read automatically on every asset and every line of copy."
+    },
+    {
+      "type": "compare",
+      "kicker": "LESSON / WHY EYES FAIL",
+      "h2": "THE REVIEWER WAS THE PROBLEM",
+      "left": {"h3": "A human pass", "big": "Reads intent", "p": "You see what you meant to make. Familiarity is the enemy, and you are the most familiar reader you have."},
+      "right": {"h3": "A machine pass", "big": "Reads characters", "p": "It has no idea what you meant. It counts, it matches, it fails loudly, and it does not get tired on asset nine."}
+    },
+    {
+      "type": "law",
+      "kicker": "LESSON / THE RULE",
+      "quote": "A standard nobody can check automatically is a preference, and it will be broken by the person who wrote it first.",
+      "src": "Which is exactly what happened here, thirteen times, in one batch.",
+      "boundary": "The gate runs before scheduling, not after posting."
+    },
+    {
+      "type": "body",
+      "kicker": "LESSON / PORTABLE",
+      "h2": "THE VERSION IN YOUR SHOP",
+      "lede": [
+        "Your logo usage guide, your quote template, the rule about how the client name gets spelled. All of it lives in a document somebody read once.",
+        "Pick the rule that matters most and make it mechanical. A required field, a checklist that blocks sending, a template that will not let the wrong thing through."
+      ],
+      "boundary": "If it needs somebody to notice, it is already broken somewhere."
+    },
+    {
+      "type": "cta",
+      "kicker": "LESSON / ACCESS",
+      "h2": "SAME TREATMENT, INSIDE THE PLATFORM",
+      "lede": ["Promo shops can request access. The rules that guard the work are part of what I am actually selling."],
+      "pills": [{"t": "Checks before send", "on": true}, {"t": "Nothing auto sends", "on": true}, {"t": "Access by request"}],
+      "cta": "stoutintel.com/sips",
+      "boundary": "Demo tenant for every walkthrough."
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "id": "09",
+  "slug": "demoed-as-an-empty-page",
+  "title": "B40 · Half my product demoed as an empty page",
+  "anchor": "Demo tenant walkthrough, 9 September 2026; maturity markers from the feature inventory of 8 August 2026",
+  "persona": "owner",
+  "colourway": "Oxide",
+  "sizes": ["li_doc", "ig_post"],
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "40 / BUILD",
+      "headline": "HALF MY PRODUCT DEMOED AS AN <em>EMPTY PAGE</em>",
+      "sub": "I opened the shipping side to show somebody, and it opened on nothing.",
+      "boundary": "The demo tenant is a parallel empty database. That is the whole reason this happened."
+    },
+    {
+      "type": "body",
+      "kicker": "40 / WHAT HAPPENED",
+      "h2": "A BLANK SCREEN IS NOT A NEUTRAL SCREEN",
+      "lede": [
+        "The feature worked. It had shipped, it had tests, it ran fifty shipments in 254 seconds the week before.",
+        "But the demo tenant is deliberately empty, so what the other person saw was a page with a heading and white space underneath it."
+      ],
+      "boundary": "Nothing was broken. That is what made it worse."
+    },
+    {
+      "type": "law",
+      "kicker": "40 / THE LESSON",
+      "quote": "A blank screen does not read as no data. It reads as unfinished.",
+      "src": "The viewer cannot tell the difference, and they will not ask.",
+      "boundary": "This is a selling bug, not a rendering bug."
+    },
+    {
+      "type": "list",
+      "kicker": "40 / THE FIX",
+      "h2": "WHAT AN EMPTY STATE OWES THE VIEWER",
+      "numbered": true,
+      "items": [
+        {"text": "Say what lives here in one line", "tag": "name it"},
+        {"text": "Say why it is empty right now", "tag": "explain"},
+        {"text": "Show the shape, one sample row, marked as a sample", "tag": "shape"},
+        {"text": "Give the one action that fills it", "tag": "next"},
+        {"text": "Never leave a bare heading over white space", "tag": "never"}
+      ],
+      "boundary": "Sample rows carry a visible sample label so nobody mistakes them for a real order."
+    },
+    {
+      "type": "compare",
+      "kicker": "40 / THE SAME PAGE",
+      "h2": "WHAT THE VIEWER CONCLUDES",
+      "left": {"h3": "Bare heading", "big": "Unfinished", "p": "They stop asking about the feature, and they quietly downgrade everything else you showed them."},
+      "right": {"h3": "Explained empty", "big": "Ready", "p": "They ask how the data gets in, which is the question you actually wanted."},
+      "boundary": "Same code, same day, different sale."
+    },
+    {
+      "type": "table",
+      "kicker": "40 / HONEST MARKERS",
+      "h2": "SO EVERY SURFACE CARRIES ITS STATE",
+      "head": ["Marker", "Means"],
+      "rows": [
+        ["In daily use", "eleven people touch it every working day"],
+        ["Built and working, lightly used", "real, not yet load bearing"],
+        ["Built, not handed over", "no client book on it yet", true],
+        ["Empty by design", "demo tenant, sample rows only", true]
+      ],
+      "boundary": "Marked on the page itself rather than in a sales deck."
+    },
+    {
+      "type": "body",
+      "kicker": "40 / THE PORTABLE PART",
+      "h2": "THIS IS NOT A SOFTWARE PROBLEM",
+      "lede": [
+        "Every business has a version of the empty page. The catalogue with no photos on half the items. The quote with a blank lead time. The price list where four rows say call us.",
+        "The reader does not read a gap as missing information. They read it as a company that has not finished the job."
+      ],
+      "boundary": "Go and look at the thing you send out most often, and find the blank."
+    },
+    {
+      "type": "cta",
+      "kicker": "40 / ACCESS",
+      "h2": "SEE THE FILLED VERSION",
+      "lede": ["I will walk it with sample data that is labelled as sample data, and tell you which surfaces are load bearing today."],
+      "pills": [{"t": "Demo tenant", "on": true}, {"t": "Maturity said out loud", "on": true}, {"t": "No screenshots of a real book"}],
+      "cta": "stoutintel.com/sips",
+      "boundary": "You will be told what is not handed over yet, before you ask."
+    }
+  ]
+}

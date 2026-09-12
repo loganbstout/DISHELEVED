@@ -1,0 +1,85 @@
+{
+  "id": "12",
+  "slug": "the-tool-that-lied",
+  "title": "C11 · The tool that reads your settings lied to me",
+  "anchor": "Configuration read that returned a blank for a value that was set, session 9 September 2026",
+  "persona": "owner",
+  "colourway": "Machine",
+  "sizes": ["li_doc", "ig_post"],
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "LESSON / SOURCES",
+      "headline": "THE TOOL THAT READS YOUR SETTINGS <em>LIED TO ME</em>",
+      "sub": "I read a setting, saw it was blank, and changed it. It was never blank.",
+      "boundary": "No credentials or configuration values appear in this document."
+    },
+    {
+      "type": "body",
+      "kicker": "LESSON / WHAT HAPPENED",
+      "h2": "THE READ CAME BACK EMPTY",
+      "lede": [
+        "I asked the tool what a value was set to. It told me nothing was there. So I set it, which is the reasonable thing to do when a required setting is missing.",
+        "The value had been there the whole time. The tool I asked simply does not display that one, and it reports the same empty answer either way."
+      ],
+      "boundary": "An empty answer and a hidden answer looked identical."
+    },
+    {
+      "type": "compare",
+      "kicker": "LESSON / THE TWO ANSWERS",
+      "h2": "WHAT EMPTY CAN ACTUALLY MEAN",
+      "left": {"h3": "What I heard", "big": "Not set", "p": "Nothing is configured here, so configuring it is safe and probably overdue."},
+      "right": {"h3": "What it meant", "big": "Not shown", "p": "Something is configured here, and I am not going to tell you what, so writing over it is on you."},
+      "boundary": "Two different facts, one blank field."
+    },
+    {
+      "type": "list",
+      "kicker": "LESSON / THE HABIT",
+      "h2": "WHAT I DO BEFORE I WRITE NOW",
+      "numbered": true,
+      "items": [
+        {"text": "Ask what the source of truth is, not what the dashboard says", "tag": "first"},
+        {"text": "Read the value at the source, even when it is slower", "tag": "verify"},
+        {"text": "Treat a blank from a viewer as unknown, never as absent", "tag": "rule"},
+        {"text": "Write down what it was before I change it", "tag": "undo"},
+        {"text": "Check the thing the setting controls, not the setting", "tag": "proof"}
+      ],
+      "boundary": "The fourth one is the cheapest insurance in this whole list."
+    },
+    {
+      "type": "law",
+      "kicker": "LESSON / THE RULE",
+      "quote": "A blank field in a viewer is not a fact about the system. It is a fact about the viewer.",
+      "src": "Same shape as a passing test that never touched the button.",
+      "boundary": "Every tool has values it will not show you. Find out which ones before you need to know."
+    },
+    {
+      "type": "body",
+      "kicker": "LESSON / PORTABLE",
+      "h2": "YOUR BUSINESS HAS THIS EXACT BUG",
+      "lede": [
+        "The report that shows no open orders for that client because their orders are filed under a second company record. The stock count that reads zero because the item was received under a different code.",
+        "Somebody then makes a completely rational decision on top of a blank that was never empty."
+      ],
+      "boundary": "Ask where the number is coming from before you act on the absence of one."
+    },
+    {
+      "type": "stat",
+      "kicker": "LESSON / RELATED",
+      "eyebrow": "FIELDS I FOUND HOLDING SEVERAL VALUES AT ONCE",
+      "value": "2",
+      "label": "of my own columns were quietly stuffing multiple values into one string, so any tool reading them read one and missed the rest.",
+      "sub": "One held tracking numbers. The other held the trail of absorbed links. Both are on the list to be normalized rather than patched.",
+      "boundary": "Named in writing on the plan, including the two that get deleted outright."
+    },
+    {
+      "type": "cta",
+      "kicker": "LESSON / ACCESS",
+      "h2": "THE PLATFORM THIS CAME OUT OF",
+      "lede": ["Promo shops can request access, and I will show the honest version, open items and all."],
+      "pills": [{"t": "Open items published", "on": true}, {"t": "Access by request", "on": true}, {"t": "Demo tenant only"}],
+      "cta": "stoutintel.com/sips",
+      "boundary": "You get the list of what is not finished before you get a price."
+    }
+  ]
+}

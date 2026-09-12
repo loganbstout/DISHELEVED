@@ -1,0 +1,87 @@
+{
+  "id": "11",
+  "slug": "green-tests-dead-button",
+  "title": "C17 · Three days of green tests and a dead button",
+  "anchor": "Shipping tracking email crash, session 8 September 2026; and the 401 that was read as proof of deployment",
+  "persona": "owner",
+  "colourway": "Oxide",
+  "sizes": ["li_doc", "ig_post"],
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "LESSON / PROOF",
+      "headline": "THREE DAYS OF GREEN TESTS AND A <em>DEAD BUTTON</em>",
+      "sub": "Every test in the platform passed. The one button a rep needed most did nothing.",
+      "boundary": "No client data appears in this document."
+    },
+    {
+      "type": "metrics",
+      "kicker": "LESSON / THE STATE",
+      "h2": "WHAT I BELIEVED ON DAY THREE",
+      "metrics": [
+        {"value": "green", "label": "the whole suite"},
+        {"value": "3 days", "label": "of believing it"},
+        {"value": "1", "label": "button that was dead"},
+        {"value": "0", "label": "tests that touched it"}
+      ],
+      "boundary": "The suite was not lying. It had never been asked the question."
+    },
+    {
+      "type": "body",
+      "kicker": "LESSON / WHY",
+      "h2": "A TEST PROVES THE THING IT TOUCHES",
+      "lede": [
+        "The tests covered the functions underneath. The failure was in the wiring between the page and those functions, which no test had an opinion about.",
+        "So every check I ran agreed with me, and all of them were answering a different question than the one I thought I was asking."
+      ],
+      "boundary": "The button rendered. It simply had nothing behind it."
+    },
+    {
+      "type": "list",
+      "kicker": "LESSON / THE PATTERN",
+      "h2": "FOUR CHECKS THAT AGREE WITH YOU FOR FREE",
+      "numbered": true,
+      "items": [
+        {"text": "A test suite that never loads the page a person uses", "tag": "silent"},
+        {"text": "A deploy that reports success for shipping the old build", "tag": "silent"},
+        {"text": "A login wall answering before your code does", "tag": "silent"},
+        {"text": "A log with no errors in it because nothing ran", "tag": "silent"}
+      ],
+      "boundary": "A refusal from the front door is not evidence that the room behind it exists."
+    },
+    {
+      "type": "law",
+      "kicker": "LESSON / THE RULE",
+      "quote": "The build proves it, not the test suite. Open the page a human opens, and press the thing a human presses.",
+      "src": "Every claim of live now needs one screenshot of the working surface, taken after the deploy.",
+      "boundary": "I said a feature was live once when it was not. That is where this rule came from."
+    },
+    {
+      "type": "compare",
+      "kicker": "LESSON / WHAT CHANGED",
+      "h2": "HOW I CLOSE A BUILD NOW",
+      "left": {"h3": "Before", "big": "Suite green", "p": "Tests pass, deploy reports success, mark it done, tell somebody it shipped."},
+      "right": {"h3": "Now", "big": "Hands on it", "p": "Load the real page, press the real control, watch the real record change. Then mark it done."},
+      "boundary": "It costs about ninety seconds and it has caught four of these."
+    },
+    {
+      "type": "body",
+      "kicker": "LESSON / PORTABLE",
+      "h2": "THE SAME TRAP, WITHOUT CODE",
+      "lede": [
+        "Your process document says the confirmation goes out. Your inbox says the mail merge ran. Neither of those is a client holding a confirmation.",
+        "Pick the one thing you are most sure works because a report says so. Then go be the customer for five minutes."
+      ],
+      "boundary": "The report is a claim. The click is the proof."
+    },
+    {
+      "type": "cta",
+      "kicker": "LESSON / ACCESS",
+      "h2": "BUILT BY SOMEBODY WHO USES IT",
+      "lede": ["I sell promotional products for a living, so every one of these gets found the hard way, on a working day."],
+      "pills": [{"t": "Promo shops", "on": true}, {"t": "Slack art departments"}, {"t": "Access by request"}],
+      "cta": "stoutintel.com/sips",
+      "boundary": "Demo tenant for every walkthrough."
+    }
+  ]
+}

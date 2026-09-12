@@ -1,0 +1,85 @@
+/* Stout Intel asset styling. Colour values are injected per render from brand/tokens.json. */
+@font-face{font-family:Archivo;src:url("fonts/archivo-400.ttf")format("truetype");font-weight:400}
+@font-face{font-family:Archivo;src:url("fonts/archivo-600.ttf")format("truetype");font-weight:600}
+@font-face{font-family:Archivo;src:url("fonts/archivo-800.ttf")format("truetype");font-weight:800}
+@font-face{font-family:"Plex Mono";src:url("fonts/plexmono-400.ttf")format("truetype");font-weight:400}
+@font-face{font-family:"Plex Mono";src:url("fonts/plexmono-600.ttf")format("truetype");font-weight:600}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html,body{background:var(--bg)}
+body{font-family:Archivo,"Liberation Sans",sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+
+.slide{position:relative;width:var(--w);height:var(--h);background:var(--bg);overflow:hidden;
+  display:flex;flex-direction:column;padding:76px 72px 64px}
+.slide+.slide{page-break-before:always;break-before:page}
+
+/* grain + hairline grid, keeps flat colour from looking like a template */
+.slide::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background:linear-gradient(var(--rule) .5px,transparent .5px) 0 0/100% 120px}
+.slide::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--accent);opacity:.9}
+
+/* ---- top bar ---- */
+.bar{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:baseline;
+  font-family:"Plex Mono",monospace;font-size:19px;letter-spacing:.16em;text-transform:uppercase}
+.kicker{color:var(--accent);font-weight:600}
+.seal{color:var(--dim);font-weight:400}
+
+/* ---- body ---- */
+.main{position:relative;z-index:2;flex:1 1 auto;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:34px;padding:48px 0}
+.main.top{justify-content:center}
+h1{font-weight:800;text-transform:uppercase;letter-spacing:-.022em;line-height:.9;font-size:var(--h1,104px)}
+h1 em{font-style:normal;color:var(--accent)}
+h2{font-weight:800;text-transform:uppercase;letter-spacing:-.015em;line-height:.95;font-size:64px}
+.sub{font-size:34px;line-height:1.32;color:var(--ink);max-width:22ch;font-weight:400}
+.sub.wide{max-width:34ch}
+.lede{font-size:31px;line-height:1.44;color:var(--ink);font-weight:400}
+.lede.dim{color:var(--dim)}
+.eyebrow{font-family:"Plex Mono",monospace;font-size:20px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);font-weight:600}
+
+/* ---- metrics ---- */
+.metrics{display:flex;flex-wrap:wrap;gap:0;border-top:1px solid var(--rule)}
+.metric{flex:1 1 40%;min-width:200px;border-bottom:1px solid var(--rule);padding:26px 26px 26px 0}
+.metric .v{font-size:88px;font-weight:800;line-height:.92;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.metric .l{font-family:"Plex Mono",monospace;font-size:19px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-top:12px}
+.hero-stat .v{font-size:236px;line-height:.84;letter-spacing:-.045em;color:var(--accent);font-variant-numeric:tabular-nums}
+.hero-stat .l{font-size:29px;color:var(--ink);letter-spacing:.04em;text-transform:none;font-family:Archivo,sans-serif;margin-top:22px;max-width:26ch;line-height:1.3}
+
+/* ---- list ---- */
+ol.steps,ul.steps{list-style:none;display:flex;flex-direction:column;gap:0}
+.steps li{display:flex;gap:26px;align-items:baseline;padding:21px 0;border-bottom:1px solid var(--rule);font-size:30px;line-height:1.3}
+.steps li .n{font-family:"Plex Mono",monospace;font-size:21px;font-weight:600;color:var(--accent);flex:0 0 44px;letter-spacing:.06em}
+.steps li.off{color:var(--dim)}
+.steps li .tag{margin-left:auto;font-family:"Plex Mono",monospace;font-size:18px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);white-space:nowrap;padding-left:20px}
+
+/* ---- compare ---- */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--rule)}
+.compare>div{padding:36px 34px}
+.compare>div+div{border-left:1px solid var(--rule);background:var(--surface)}
+.compare h3{font-family:"Plex Mono",monospace;font-size:19px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);font-weight:600;margin-bottom:22px}
+.compare .big{font-size:60px;font-weight:800;line-height:.98;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.compare p{font-size:27px;line-height:1.34;margin-top:16px}
+.compare>div+div .big{color:var(--accent)}
+
+/* ---- table ---- */
+table{width:100%;border-collapse:collapse;font-size:27px}
+th,td{text-align:left;padding:20px 0;border-bottom:1px solid var(--rule);vertical-align:baseline}
+th{font-family:"Plex Mono",monospace;font-size:18px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);font-weight:600}
+td.num{text-align:right;font-variant-numeric:tabular-nums;font-weight:800;white-space:nowrap}
+td.num.hot{color:var(--accent)}
+td code{font-family:"Plex Mono",monospace;font-size:24px;color:var(--ink)}
+
+/* ---- rule / law slide ---- */
+.law{border-left:6px solid var(--accent);padding:8px 0 8px 38px}
+.law .q{font-size:52px;font-weight:600;line-height:1.16;letter-spacing:-.01em}
+.law .src{font-family:"Plex Mono",monospace;font-size:20px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-top:28px}
+
+/* ---- footer ---- */
+.foot{position:relative;z-index:2;flex:0 0 auto;display:block;overflow:hidden;
+  border-top:1px solid var(--rule);padding-top:20px;font-family:"Plex Mono",monospace;font-size:18px;letter-spacing:.02em;color:var(--dim)}
+.foot .no{float:right;margin-left:28px;font-weight:600;letter-spacing:.1em;white-space:nowrap}
+.foot .boundary{line-height:1.5;overflow-wrap:break-word}
+.cta-line{font-family:"Plex Mono",monospace;font-size:30px;letter-spacing:.06em;color:var(--accent);font-weight:600}
+.pill{display:inline-block;font-family:"Plex Mono",monospace;font-size:19px;letter-spacing:.12em;text-transform:uppercase;
+  border:1px solid var(--rule);color:var(--dim);padding:9px 16px;border-radius:2px}
+.pill.on{background:var(--accent);color:var(--accentInk);border-color:var(--accent);font-weight:600}
+.pillrow{display:flex;flex-wrap:wrap;gap:12px}
